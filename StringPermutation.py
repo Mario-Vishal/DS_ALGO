@@ -22,4 +22,4 @@ def permutate(s):
 
     return out
 
-print(permutate('abc'))
+print(permutate('333'))
