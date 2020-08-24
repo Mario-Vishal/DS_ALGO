@@ -46,21 +46,25 @@ def preOrder(root):
     if root is None:
         return
     else:
-        print(root.val)
+        print(root.val,end=" ")
         preOrder(root.left)
         preOrder(root.right)
+    
 
 def levelOrder(root):
     q = Queue()
     q.enQueue(root)
     while q.size:
-        if root.left is not None:
-            q.enQueue(root.left)
-        if root.right is not None:
-            q.enQueue(root.right)
+        node = q.qPeak()
+        if node.left is not None:
+            q.enQueue(node.left)
+        if node.right is not None:
+            q.enQueue(node.right)
         
-        print(q.qPeak())
+        print(node.val,end=" ")
         q.deQueue()
+
+    
 
 
 root = Node(10)
@@ -75,5 +79,6 @@ root.left.right = Node(0)
 insert_node(root,Node(11))
 
 preOrder(root)
+print()
 
 levelOrder(root)
