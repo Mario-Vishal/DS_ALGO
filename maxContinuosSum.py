@@ -5,9 +5,9 @@ def largeSum(l):
 
     max_sum = current_sum = l[0]
 
-    for i in range(1,l):
+    for i in range(1,len(l)):
 
-        current_sum = max(num,num+current_sum)
+        current_sum = max(l[i],l[i]+current_sum)
         
         
         max_sum = max(current_sum,max_sum)

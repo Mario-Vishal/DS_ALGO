@@ -1,14 +1,7 @@
+#Program to find the nth node from the last in Linked List
+
 from linkedList import *
 
-l = LinkedList()
-head = Node(10)
-l.head = head
-l.append(11)
-l.append(12)
-l.append(13)
-l.append(14)
-l.append(15)
-l.append(16)
 
 
 def findNode_Nth(head,n):
@@ -27,6 +20,17 @@ def findNode_Nth(head,n):
         right_pointer = right_pointer.next
 
     return left_pointer
+
+l = LinkedList()
+head = Node(10)
+l.head = head
+l.append(11)
+l.append(12)
+l.append(13)
+l.append(14)
+l.append(15)
+l.append(16)
+
 
 res = findNode_Nth(l.head , 1)
 

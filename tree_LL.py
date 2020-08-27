@@ -67,6 +67,9 @@ class Queue:
 
     def dispQ(self):
         print(self.list)
+
+    def clear(self):
+        self.list=[]
     
 
 
@@ -110,37 +113,60 @@ def insert_bt(root,val):
                 q.enQueue(current_node.left)
                 q.enQueue(current_node.right)
 
-def deepest_node(root):
+# def deepest_node(root):
+#     q=Queue()
+#     q.enQueue(root)
+#     val=None
+#     while q.size()!=0:
+#         l=listChildren(q.peak())
+#         for i in l:
+#             q.enQueue(i)
+#         val = q.peak()
+#         q.deQueue()
+#     return val
+    
+
+def delete_node(root,val):
     q=Queue()
     q.enQueue(root)
-    val=0
+    dval1=None
     while q.size()!=0:
         l=listChildren(q.peak())
         for i in l:
             q.enQueue(i)
-        val = q.peak()
+        dval1 = q.peak()
         q.deQueue()
-    return val
-    
+    dval= dval1.value
+    dval1=None
 
-def delete_node(root,val):
-    val_deep = deepest_node(root)
-    q = Queue()
+    q.clear()
+
     q.enQueue(root)
     #search for the node which is to be deleted
     while q.size()!=0:
         node = q.peak()
         
         if node.value ==val:
-            node.val = val_deep.value
+            node.value = dval
             break
         else:
             q.deQueue()
             if node.left!=None:
-                q.enQueue(node.left)
+                if node.left == val:
+                    node.left = None
+                    return
+                else:
+                    q.enQueue(node.left)
             if node.right!=None:
-                q.enQueue(node.right)
-    val_deep=None
+                if node.right == val:
+                    node.right = None
+                    return
+                else:
+                    q.enQueue(node.right)
+ 
+    return root
+
+    
 
         
         
@@ -180,7 +206,10 @@ for i in l:
 # levelOrder(tree.root)
 levelOrder(btree)
 
-delete_node(btree,250)
+b=delete_node(btree,250)
 
-levelOrder(btree)
+levelOrder(b)
+
+
+# print(deepest_node(btree).value)
 
