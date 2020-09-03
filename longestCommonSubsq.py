@@ -22,12 +22,13 @@ def lcs(s1,s2,len1,len2):
         cache[len2][len1] = max(lcs(s1,s2,len1-1,len2),lcs(s1,s2,len1,len2-1))
         return cache[len2][len1]
 
-s1 = 'XYUQWE'
-s2 = 'XUTTEW'
+s1 = 'SHINCHAN'
+
+s2 = 'NOHARAAA'
 
 global cache
 
-cache = [[0 if i==0 or j==0 else None  for i in range(len(s1)+1)] for j in range(len(s2)+1) ]
+cache = [[0 if i==0 or j==0 else None for i in range(len(s1)+1)] for j in range(len(s2)+1) ]
 
 # print(lcs(s1,s2,len(s1),len(s2)))
 
