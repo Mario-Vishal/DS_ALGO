@@ -1,3 +1,16 @@
+'''
+Given a string s, find out the count of all contiguous substrings whose starting and ending are same character.
+Note: string contains lowercase English alphabets only.
+
+Input  : S = "aba"
+Output : 4
+The substrings are a, b, a and aba
+
+AMAZON
+
+'''
+
+
 def find(s):
 
     if len(s)<2:
