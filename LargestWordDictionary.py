@@ -15,7 +15,7 @@ def longestWord(dictionary,string):
         while i<len(st) and j<len(string):
             
             if st[i] == string[j]:
-                print(string[i],end=" ")
+                
                 i+=1
                 
                 count+=1
