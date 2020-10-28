@@ -19,17 +19,6 @@ def reverseSentence(s):
             end=i-1
             print("",end=" ")
 
-        
-
-
-    
-        
-
-
-        
-
-
-
 
 def reverse(s,i,j):
   
