@@ -40,4 +40,4 @@ mat = [[18,21,27,38,55,67]]
 
 s = Solution()
 
-print(s.matSearch(mat,1,6,55))
+print(s.matSearch(mat,1,6,75))
