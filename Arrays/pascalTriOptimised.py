@@ -29,7 +29,7 @@ def genRow(n):
         val=1
         val1=1
         temp=0
-        for i in range(1,n-1):
+        for _ in range(1,n-1):
             val*= num
             val1*=den
             temp=int(val/val1)
