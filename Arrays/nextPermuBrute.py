@@ -42,7 +42,7 @@ def permute(n,low,high,result):
             permute(n,low+1,high,result)
             n[i],n[low] = n[low],n[i]
 
-v=nextPermute([4,5,1])
+v=nextPermute([1,2,3,4,5])
 
 print(v)
 
