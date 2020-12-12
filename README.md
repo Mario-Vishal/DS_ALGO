@@ -1,5 +1,5 @@
 # DS_ALGO
-implementation of all competitive programs from different programming websites like GFG, leetcode, Hackerrank. Using python, c++ and maybe Java sometime.
+Implementation of all competitive programs from different programming websites like GFG, leetcode, Hackerrank. Using python, c++ and maybe Java sometime.
 
 Feel free to fork it, and also to contribute.
 
