@@ -110,6 +110,10 @@ class Solution:
             if sidew%2==0:
                 sidew-=1
 
+            if sidel!=sidew:
+                sidel=min(sidel,sidew)
+                sidew=sidel
+
            
             return sidel*sidew
 
