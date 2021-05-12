@@ -42,4 +42,3 @@ root.right.right = Node(10)
 root.right.right.right = Node(1)
 
 levelOrder(root)
-        
